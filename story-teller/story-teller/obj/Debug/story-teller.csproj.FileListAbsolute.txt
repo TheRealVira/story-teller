@@ -17,4 +17,3 @@ C:\Users\Administrator\Desktop\POS_NVS\story-teller\story-teller\story-teller\ob
 C:\Users\Administrator\Desktop\POS_NVS\story-teller\story-teller\story-teller\obj\Debug\story-teller.csproj.CopyComplete
 C:\Users\Administrator\Desktop\POS_NVS\story-teller\story-teller\story-teller\obj\Debug\story-teller.exe
 C:\Users\Administrator\Desktop\POS_NVS\story-teller\story-teller\story-teller\obj\Debug\story-teller.pdb
-C:\Users\Administrator\Desktop\POS_NVS\story-teller\story-teller\story-teller\obj\Debug\story-teller.csprojAssemblyReference.cache

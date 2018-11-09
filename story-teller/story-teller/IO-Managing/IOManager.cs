@@ -39,6 +39,15 @@ namespace story_teller
             }
         }
 
+        public static async void Save<T>(IEnumerable<T> data, string path) where T : ISaveable
+        {
+            EnsureDirectoryExists(path);
+            using (var writer = new StreamWriter(path, false))
+            {
+                await writer.WriteAsync(JsonConvert.SerializeObject(data, Formatting.Indented));
+            }
+        }
+
         public static async Task<T> Load<T>(string path) where T : ISaveable
         {
             using (var reader = new StreamReader(path))

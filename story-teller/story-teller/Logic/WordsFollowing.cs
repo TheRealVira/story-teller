@@ -15,11 +15,16 @@ namespace story_teller.Logic
         public const string FileName = "Relatives";
 
         [DataMember]
-        public ConcurrentDictionary<string, int> Relatives { get; }
+        public ConcurrentDictionary<string, double> Relatives { get; }
 
         public WordsFollowing(string word) : base(word)
         {
-            Relatives = new ConcurrentDictionary<string, int>();
+            Relatives = new ConcurrentDictionary<string, double>();
+        }
+
+        public WordsFollowing(string word, ConcurrentDictionary<string, double> relatives) : base(word)
+        {
+            Relatives = relatives;
         }
 
         public void Save()
@@ -66,7 +71,7 @@ namespace story_teller.Logic
                 foreach (var unionizedWeightRelative in unionizedWeight.Relatives)
                 {
                     unionizedWeight.Relatives.AddOrUpdate(unionizedWeightRelative.Key, 1,
-                        (id, count) => count / documents.Count());
+                        (id, count) => (double)(count / documents.Count()));
                 }
             }
 

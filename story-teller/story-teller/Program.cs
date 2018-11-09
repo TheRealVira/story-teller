@@ -5,9 +5,9 @@ using story_teller.Logic;
 
 namespace story_teller
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             Console.WriteLine("Sources: https://www.azlyrics.com/m/mychemicalromance.html");
 
@@ -16,21 +16,22 @@ namespace story_teller
             Console.WriteLine("Documents loaded!");
 
             Console.WriteLine("Calculating the average of:");
-            Console.WriteLine("Paragraph per Story:\t"+documents.AverageOf());
-            Console.WriteLine("Sentence per paragraph:\t" + documents.SelectMany(x=>x.Text).AverageOf());
-            Console.WriteLine("Words per sentence\t"+documents.SelectMany(x=>x.Text).SelectMany(x=>x.Sentences).AverageOf());
+            var documentArray = documents as Document[] ?? documents.ToArray();
+            Console.WriteLine("Paragraph per Story:\t"+documentArray.AverageOf());
+            Console.WriteLine("Sentence per paragraph:\t" + documentArray.SelectMany(x=>x.Text).AverageOf());
+            Console.WriteLine("Words per sentence\t"+documentArray.SelectMany(x=>x.Text).SelectMany(x=>x.Sentences).AverageOf());
 
             Console.WriteLine("Calculating relatives...");
-            var relatives = WordsFollowing.Calculate(documents);
-            var saveableList = new SaveableList<WordsFollowing>(relatives,"results");
-            saveableList.Save();
+            var relatives = WordsFollowing.Calculate(documentArray);
+            IOManager.Save(relatives, "./Results/relatives.json");
+            //saveableList.Save();
             Console.WriteLine("Finished calculating relatives!");
 
             Console.WriteLine("Saving documents...");
-            documents.AsParallel().ForAll(x=>x.Save());
+            documentArray.AsParallel().ForAll(x=>x.Save());
             Console.WriteLine("Documents saved!");
 
-            Console.ReadKey(false);
+            Console.ReadKey(true);
         }
     }
 }
