@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning", "Learning\Learning.csproj", "{CD1E0D7B-7805-48C6-9544-4AD7B0DBF62C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "story-teller", "story-teller\story-teller.csproj", "{AA7F061B-6F6A-4FF6-A8F5-190AA3A4530E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CD1E0D7B-7805-48C6-9544-4AD7B0DBF62C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD1E0D7B-7805-48C6-9544-4AD7B0DBF62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD1E0D7B-7805-48C6-9544-4AD7B0DBF62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD1E0D7B-7805-48C6-9544-4AD7B0DBF62C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7F061B-6F6A-4FF6-A8F5-190AA3A4530E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7F061B-6F6A-4FF6-A8F5-190AA3A4530E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7F061B-6F6A-4FF6-A8F5-190AA3A4530E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7F061B-6F6A-4FF6-A8F5-190AA3A4530E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
