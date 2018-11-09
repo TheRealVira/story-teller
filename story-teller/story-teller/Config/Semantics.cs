@@ -18,7 +18,7 @@ namespace story_teller.Config
 
         public void Save()
         {
-            IOManager.Safe(this, MyDir + FileName + IOManager.GlobalFileExtension);
+            IOManager.Save(this, MyDir + FileName + IOManager.GlobalFileExtension);
         }
     }
 }

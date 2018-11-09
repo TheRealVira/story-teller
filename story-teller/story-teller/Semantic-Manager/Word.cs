@@ -6,7 +6,7 @@ namespace story_teller.Semantic_Manager
     public class Word
     {
         [DataMember]
-        private string Content;
+        public readonly string Content;
 
         public Word(string content)
         {

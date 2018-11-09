@@ -30,7 +30,7 @@ namespace story_teller
             }
         }
 
-        public static async void Safe<T>(T data, string path) where T : ISaveable
+        public static async void Save<T>(T data, string path) where T : ISaveable
         {
             EnsureDirectoryExists(path);
             using (var writer = new StreamWriter(path, false))
