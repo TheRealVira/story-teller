@@ -42,7 +42,7 @@ namespace story_teller
 
         }
 
-        public void Safe()
+        public void Save()
         {
             IOManager.Safe(this, MyDir + Path.GetFileNameWithoutExtension(Filename) + IOManager.GlobalFileExtension);
         }

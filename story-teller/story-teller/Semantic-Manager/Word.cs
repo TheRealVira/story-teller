@@ -3,7 +3,7 @@
 namespace story_teller.Semantic_Manager
 {
     [DataContract]
-    internal class Word
+    public class Word
     {
         [DataMember]
         private string Content;

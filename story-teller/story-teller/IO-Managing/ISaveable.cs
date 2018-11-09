@@ -2,6 +2,6 @@
 {
     internal interface ISaveable
     {
-        void Safe();
+        void Save();
     }
 }

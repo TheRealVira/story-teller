@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 using story_teller.Config;
 
@@ -8,7 +10,10 @@ namespace story_teller.Semantic_Manager
     public class Sentence
     {
         [DataMember]
-        private IEnumerable<Word> Words;
+        public IEnumerable<Word> Words;
+
+        public int WordCount => Words.Count();
+
         public Sentence(string text, Semantics semantics)
         {
             Words = new List<Word>();

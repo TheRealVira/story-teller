@@ -26,6 +26,7 @@ namespace story_teller
 
             foreach (var s in Directory.GetFiles(path).AsParallel())
             {
+                Console.WriteLine(s);
                 yield return new Document(s, GlobalSemantics);
             }
         }

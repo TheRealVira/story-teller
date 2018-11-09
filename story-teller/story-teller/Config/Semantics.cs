@@ -16,7 +16,7 @@ namespace story_teller.Config
         [DataMember]
         public char WordEnding { get; set; }
 
-        public void Safe()
+        public void Save()
         {
             IOManager.Safe(this, MyDir + FileName + IOManager.GlobalFileExtension);
         }

@@ -9,9 +9,13 @@ namespace story_teller
         {
             Console.WriteLine("Sources: https://www.azlyrics.com/m/mychemicalromance.html");
 
+            Console.WriteLine("Loading documents...");
             var documents = IOManager.GetDocumentsFromDirectory("./Input");
+            Console.WriteLine("Documents loaded!");
 
-            documents.AsParallel().ForAll(x=>x.Safe());
+            Console.WriteLine("Saving documents...");
+            documents.AsParallel().ForAll(x=>x.Save());
+            Console.WriteLine("Documents saved!");
 
             Console.ReadKey(false);
         }
