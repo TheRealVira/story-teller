@@ -10,26 +10,11 @@
               "Content": ""
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
               "Content": "Yeah!"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
-        {
-          "Words": [
-            {
-              "Content": ""
             }
           ]
         }
@@ -82,11 +67,7 @@
               "Content": "all"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -123,11 +104,7 @@
               "Content": "feeling"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -155,11 +132,7 @@
               "Content": "fly"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -184,11 +157,7 @@
               "Content": "fall"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -222,11 +191,7 @@
               "Content": "ceiling"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -260,11 +225,7 @@
               "Content": "fall"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -309,25 +270,10 @@
         {
           "Words": [
             {
-              "Content": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
-        {
-          "Words": [
-            {
               "Content": "[Chorus]"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -343,11 +289,7 @@
               "Content": "home"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -360,11 +302,7 @@
               "Content": "home"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -377,11 +315,7 @@
               "Content": "I"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -392,17 +326,6 @@
             },
             {
               "Content": "home"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
-        {
-          "Words": [
-            {
-              "Content": ""
             }
           ]
         }
@@ -417,17 +340,6 @@
             },
             {
               "Content": "on!"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
-        {
-          "Words": [
-            {
-              "Content": ""
             }
           ]
         }
@@ -480,11 +392,7 @@
               "Content": "all."
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -521,11 +429,7 @@
               "Content": "feeling."
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -553,11 +457,7 @@
               "Content": "fly,"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -582,11 +482,7 @@
               "Content": "fall."
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -628,25 +524,10 @@
         {
           "Words": [
             {
-              "Content": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
-        {
-          "Words": [
-            {
               "Content": "[Chorus]"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -662,11 +543,7 @@
               "Content": "home,"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -679,11 +556,7 @@
               "Content": "I,"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
@@ -694,17 +567,6 @@
             },
             {
               "Content": "home."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
-        {
-          "Words": [
-            {
-              "Content": ""
             }
           ]
         }
@@ -762,17 +624,6 @@
         {
           "Words": [
             {
-              "Content": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
-        {
-          "Words": [
-            {
               "Content": "Think"
             },
             {
@@ -785,23 +636,15 @@
               "Content": "[x8]"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Sentences": [
+        },
         {
           "Words": [
             {
               "Content": "Think"
             },
             {
-              "Content": "ha.."
-            }
-          ]
-        },
-        {
-          "Words": [
+              "Content": "ha..."
+            },
             {
               "Content": "wooo!"
             }

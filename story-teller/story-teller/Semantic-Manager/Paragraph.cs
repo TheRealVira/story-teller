@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 using story_teller.Config;
+using story_teller.Logic;
 
 namespace story_teller.Semantic_Manager
 {
     [DataContract]
-    internal class Paragraph
+    internal class Paragraph:ICountable
     {
         [DataMember]
-        private IEnumerable<Sentence> Sentences;
+        public IEnumerable<Sentence> Sentences;
 
         public Paragraph(string text, Semantics semantics)
         {
@@ -18,6 +20,11 @@ namespace story_teller.Semantic_Manager
             {
                 Sentences = Sentences.Add(new Sentence(t, semantics));
             }
+        }
+
+        public int Count()
+        {
+            return Sentences.Count();
         }
     }
 }

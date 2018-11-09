@@ -53,6 +53,8 @@
     <Compile Include="IO-Managing\Document.cs" />
     <Compile Include="IO-Managing\IOManager.cs" />
     <Compile Include="IO-Managing\ISaveable.cs" />
+    <Compile Include="Logic\Average.cs" />
+    <Compile Include="Logic\ICountable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Semantic-Manager\Paragraph.cs" />

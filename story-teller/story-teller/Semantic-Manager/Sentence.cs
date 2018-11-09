@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using story_teller.Config;
+using story_teller.Logic;
 
 namespace story_teller.Semantic_Manager
 {
     [DataContract]
-    public class Sentence
+    public class Sentence:ICountable
     {
         [DataMember]
         public IEnumerable<Word> Words;
-
-        public int WordCount => Words.Count();
 
         public Sentence(string text, Semantics semantics)
         {
@@ -21,6 +20,11 @@ namespace story_teller.Semantic_Manager
             {
                 Words = Words.Add(new Word(t));
             }
+        }
+
+        public int Count()
+        {
+            return Words.Count();
         }
     }
 }

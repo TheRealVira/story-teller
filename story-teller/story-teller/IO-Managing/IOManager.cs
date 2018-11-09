@@ -15,8 +15,8 @@ namespace story_teller
 
         public static Semantics GlobalSemantics = new Semantics()
         {
-            ParagraphEnding = Environment.NewLine,
-            SentenceEnding = ". ",
+            ParagraphEnding = Environment.NewLine+Environment.NewLine,
+            SentenceEnding = Environment.NewLine,
             WordEnding = ' '
         };
 
@@ -26,7 +26,6 @@ namespace story_teller
 
             foreach (var s in Directory.GetFiles(path).AsParallel())
             {
-                Console.WriteLine(s);
                 yield return new Document(s, GlobalSemantics);
             }
         }

@@ -5,12 +5,13 @@ using System.Linq;
 using System.Runtime.Serialization;
 using story_teller.Config;
 using story_teller.IO_Managing;
+using story_teller.Logic;
 using story_teller.Semantic_Manager;
 
 namespace story_teller
 {
     [DataContract]
-    internal class Document:ISaveable
+    internal class Document:ISaveable, ICountable
     {
         private const string MyDir = "./Documents/";
 
@@ -45,6 +46,11 @@ namespace story_teller
         public void Save()
         {
             IOManager.Safe(this, MyDir + Path.GetFileNameWithoutExtension(Filename) + IOManager.GlobalFileExtension);
+        }
+
+        public int Count()
+        {
+            return Text.Count();
         }
     }
 }
