@@ -9,7 +9,7 @@ using story_teller.Semantic_Manager;
 namespace story_teller.Logic
 {
     [DataContract]
-    class WordsFollowing:Word, ISaveable
+    class WordsFollowing:Word, ISaveable, ICountable
     {
         public const string MyDir = "./Results/";
         public const string FileName = "Relatives";
@@ -27,15 +27,50 @@ namespace story_teller.Logic
             IOManager.Save(this, MyDir + Path.GetFileNameWithoutExtension(FileName) + IOManager.GlobalFileExtension);
         }
 
+        public int Count()
+        {
+            return Relatives.Count;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Content.Equals(((WordsFollowing) obj)?.Content);
+        }
+
         public static List<WordsFollowing> Calculate(IEnumerable<Document> documents)
         {
-            var toRet = new List<WordsFollowing>();
+            var weights = new List<WordsFollowing>();
             foreach (var document in documents)
             {
-                toRet.AddRange(Calculate(document));
+                weights.AddRange(Calculate(document));
             }
 
-            return toRet;
+            var unionizedWeights = new List<WordsFollowing>();
+            foreach (var wordsFollowing in weights)
+            {
+                if (!unionizedWeights.Contains(wordsFollowing))
+                {
+                    unionizedWeights.Add(wordsFollowing);
+                }
+
+                var currentWeights = unionizedWeights.ElementAt(unionizedWeights.IndexOf(wordsFollowing));
+
+                foreach (var relative in wordsFollowing.Relatives)
+                {
+                    currentWeights.Relatives.AddOrUpdate(relative.Key, 1, (id, count) => count + 1);
+                }
+            }
+
+            foreach (var unionizedWeight in unionizedWeights)
+            {
+                foreach (var unionizedWeightRelative in unionizedWeight.Relatives)
+                {
+                    unionizedWeight.Relatives.AddOrUpdate(unionizedWeightRelative.Key, 1,
+                        (id, count) => count / documents.Count());
+                }
+            }
+
+            return weights;
         }
 
         public static List<WordsFollowing> Calculate(Document document)
